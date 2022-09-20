@@ -17,9 +17,9 @@ function HomePage(props) {
     return (
         <div>
             <NavBar/>
-            <h1>WELCOME TO PLUGG</h1>
+            <h1 style={{marginTop: '55px'}}>WELCOME TO PLUGG</h1>
             <h3>PRODUCTS:</h3>
-            {isLoading && <h3>Loading Products...</h3>}
+            {isLoading && <h3>Loading...</h3>}
             {data && data.data.map(product => 
                 <p>{product.name}</p>
             )}

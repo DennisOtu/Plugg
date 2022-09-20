@@ -1,38 +1,294 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Poppins:wght@200;300;400;600&display=swap');
+
+html{
+	box-sizing: border-box;
+}
+  
+*, *::before, *::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+	--fontHead: 'Montserrat', sans-serif;
+	--fontInfo: 'Poppins', sans-serif;
+	--pluggRed: rgb(255, 0, 0);
+	--pluggBlack: rgba(0, 0, 0, 0.877);
+	--pluggGrey: hsl(0, 1%, 34%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+	font-family: var(--fontInfo);
+	background-color: hsl(0, 0%, 98%);
+	color: var(--pluggGrey);
+}
+ 
+a {
+	color: inherit;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a:hover {
+	text-decoration: none;
+	color: inherit;
 }
 
-.App-link {
-  color: #61dafb;
+.navBar {
+	position: fixed;
+	top: 0; 
+	width: 100%;
+	z-index: 9999;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	overflow: hidden;
+	background: var(--pluggBlack);
+	color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navBar a:hover{
+	text-decoration: none;
+	color: white;
+	border-bottom: 0.15rem solid var(--pluggRed);
 }
+
+.brandLogo {
+	height: 30px;
+}
+
+.navRight {
+	width: 250px;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+	margin-right: 4rem;
+	justify-content: space-between;
+}
+
+.badgeCart {
+	color: var(--pluggRed); 
+	font-weight: bolder;
+}
+
+.heroDiv{
+	width: 100%;
+	height: 100%;
+	background: var(--pluggRed);
+	color: white;
+	overflow: hidden;
+}
+
+.heroCarousel {
+	position: relative;
+	height: 100%;
+}
+
+.heroCarousel div {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.categoriesDiv {
+	width: 20%;
+	background: rgba(0, 0, 0, 0.86);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-family: var(--fontHead);
+
+}
+
+.categoriesDiv div {
+	width: 100%;
+	font-size: 12px;
+	padding-block: 0.4rem;
+	padding-left: 3rem;
+	overflow: hidden;
+}
+
+.categoriesDiv div:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.3);
+	color: rgb(255, 32, 32);
+}
+
+.carouselPrev {
+	position: absolute;
+	z-index: 9990;
+	left: 18%;
+	top: 35%;
+	cursor: pointer;
+}
+
+.carouselNext {
+	position: absolute;
+	z-index: 9990;
+	left: 97%;
+	top: 35%;
+	cursor: pointer;
+}
+
+.dealsDiv {
+	height: 30vh;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	padding-block: 8px;
+	padding-inline: 8px;
+	overflow: hidden;
+}
+
+.dealsCard {
+	height:88%;
+	width: 16%;
+	border: 1px solid var(--pluggRed) ;
+	border-radius: 5px;
+	background-color: white;
+	margin: 8px;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.dealsCard:hover {
+	cursor: pointer;
+}
+
+.dealsCard img {
+	height: 80%;
+	width: 100%;
+	padding: 8px;
+	
+}
+
+.dealsCard div {
+	height: 100%;
+	background: var(--pluggRed);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-family: var(--fontHead);
+	font-size: 14px;
+	border-radius: 0 0 5px 5px;
+}
+
+.box-element{
+	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+	background-color: #fff;
+	border-radius: 4px;
+	padding: 10px;
+}
+
+.prodCard {
+	width: 240px;
+	height: 320px;
+	padding: 1rem;
+	border-radius: 5px;
+	margin: 8px;
+	box-shadow: 8px 8px 16px rgb(231, 222, 222);
+	
+}
+
+.prodCard:hover {
+	box-shadow:  8px 8px 16px rgb(207, 204, 204);
+
+}
+
+.prodCardInfo {
+	height: 50%;
+	overflow: hidden;
+}
+
+.prodCardInfo:hover {
+	color: var(--pluggBlack);
+}
+
+.prodImg{
+	width: 200px;
+	height: 100px;
+
+}
+
+.product{
+	border-radius: 0 0 4px 4px;
+}
+
+
+.btnPill {
+	height: 2rem;
+	width: 4rem;
+	border: 0;
+	border-radius: 8px;
+	color: var(--pluggRed);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.btnPill:hover {
+	cursor: pointer;
+	background: var(--pluggRed);
+	color: white;
+}
+
+.row-image{
+	width: 100px;
+}
+
+.form-field{
+	width:250px;
+	display: inline-block;
+	padding: 5px;
+}
+
+.cart-row{
+	display: flex;
+    align-items: flex-stretch;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ececec;
+}
+
+.quantity{
+	display: inline-block;
+	font-weight: 700;
+	padding-right:10px;
+}
+
+.chg-quantity{
+	width: 12px;
+	cursor: pointer;
+	display: block;
+	margin-top: 5px;
+	transition:.1s;
+}
+
+.chg-quantity:hover{
+	opacity: .6;
+}
+
+.hidden{
+	display: none!important;
+}
+
+.account-img {
+	height: 125px;
+	width: 125px;
+	margin-right: 20px;
+	margin-bottom: 16px;
+}
+
+.account-heading {
+font-size: 2.5rem;
+}
+
