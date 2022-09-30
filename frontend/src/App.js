@@ -6,6 +6,7 @@ import CartPage from './components/cartPage'
 import CheckoutPage from './components/checkoutPage'
 import { QueryClient, QueryClientProvider } from "react-query"
 import { ReactQueryDevtools } from 'react-query/devtools'
+//import 'bootstrap/dist/css/bootstrap.min.css'
 
 const queryClient = new QueryClient()
 

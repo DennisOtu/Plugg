@@ -139,7 +139,7 @@ a:hover {
 
 .dealsDiv {
 	height: 30vh;
-	color: white;
+	/*color: white;*/
 	display: flex;
 	flex-direction: row;
 	padding-block: 8px;
@@ -196,12 +196,10 @@ a:hover {
 	border-radius: 5px;
 	margin: 8px;
 	box-shadow: 8px 8px 16px rgb(231, 222, 222);
-	
 }
 
 .prodCard:hover {
 	box-shadow:  8px 8px 16px rgb(207, 204, 204);
-
 }
 
 .prodCardInfo {
