@@ -3,7 +3,6 @@ import { useQuery } from 'react-query'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-
 function HomePage(props) {
 
     const getAll = () => {
@@ -20,7 +19,7 @@ function HomePage(props) {
         <div>
             <NavBar />
 
-            <div className="d-flex flex-row" style={{height: '60vh', marginTop: '45px'}}>
+            <div className="d-flex flex-row" style={{height: '60vh', marginTop: 'var(--navBarHieght)', padding: '0.4rem'}}>
                 <div className="categoriesDiv">
                     <div>Electronics</div>
                     <div>Fashion</div>

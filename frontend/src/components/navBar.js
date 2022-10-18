@@ -69,13 +69,13 @@ function NavBar(props) {
         <div className="navBar">
             <img className="brandLogo" style={{marginLeft: '2rem'}} src={pluggLogo}/> 
             <img style={{height: '15px', marginLeft: '8px'}} src={pForPlugg}/> 
-            <Link style={{fontFamily: 'var(--fontHead)', fontWeight: '400', letterSpacing: '4px', fontSize: '16px'}} to='/'>LUGG </Link>
+            <Link style={{ textDecoration: 'none', fontFamily: 'var(--fontHead)', fontWeight: '400', letterSpacing: '4px', fontSize: '16px'}} to='/'>LUGG </Link>
             <div className="navRight">
                 <div>
-                <Link>LOG IN</Link>
+                <Link style={{ textDecoration: 'none' }}>Log In</Link>
                 </div>
                 <div>
-                <Link>SIGN UP</Link>
+                <Link style={{ textDecoration: 'none' }}>Sign Up</Link>
                 </div>
                 <div>
                     <Link to={'/cart'}>
