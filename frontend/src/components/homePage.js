@@ -52,7 +52,7 @@ function HomePage(props) {
                     <div className="prodCard">
                         <Link > 
                             <div>
-                                <img className="prodImg" src={ product.image }/>
+                                <img className="prodImg" src={ product.image_url }/>
                             </div>
                             <div className="prodCardInfo">
                                 <p style={{fontFamily: 'var(--fontHead)', fontSize: '14px', textAlign: 'center'}}>{ product.name }</p>
