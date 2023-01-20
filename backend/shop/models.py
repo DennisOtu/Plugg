@@ -14,21 +14,21 @@ class Customer(models.Model):
 
 class Product(models.Model):
 	seller = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
-	name = models.CharField(max_length=100)
-	price = models.DecimalField(max_digits=7, decimal_places=2)
-	digital = models.BooleanField(default=False,null=True, blank=True)
-	image = models.ImageField(upload_to='products', default='placeholder.png', null=True, blank=True)
+	category = models.CharField(max_length=100, null=True) 
+	subcategory = models.CharField(max_length=100, null=True)
+	name = models.CharField(max_length=100, null=True)
+	price = models.DecimalField(max_digits=11, decimal_places=2)
+	likes_count = models.IntegerField(default=0)
+	color_1 = models.CharField(max_length=100, null=True, blank=True)
+	color_2 = models.CharField(max_length=100, null=True, blank=True)
+	color_1_thumbnail = models.CharField(max_length=255, null=True, blank=True)
+	color_1_image = models.CharField(max_length=255, null=True, blank=True)
+	color_2_thumbnail = models.CharField(max_length=255, null=True, blank=True)
+	color_2_image = models.CharField(max_length=255, null=True, blank=True)
+	image_url = models.CharField(max_length=255, null=True)
 
 	def __str__(self):
 		return self.name
-
-	@property
-	def imageURL(self):
-		try:
-			url = self.image.url
-		except:
-			url = ''
-		return url
 
 	def get_absolute_url(self):
 		return reverse('product-detail', kwargs={'pk': self.pk})
