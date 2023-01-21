@@ -121,6 +121,7 @@ a:hover {
 .categoriesDiv div:hover {
 	cursor: pointer;
 	background-color: rgba(110, 110, 110, 0.315);
+	transform: translateY(1px);
 }
 
 .carouselPrev {
