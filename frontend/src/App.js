@@ -1,9 +1,9 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import HomePage from './components/homePage'
-import ProductInfoPage from './components/productInfoPage'
-import CartPage from './components/cartPage'
-import CheckoutPage from './components/checkoutPage'
+import HomePage from './pages/homePage'
+import ProductInfoPage from './pages/productInfoPage'
+import CartPage from './pages/cartPage'
+import CheckoutPage from './pages/checkoutPage'
 import { QueryClient, QueryClientProvider } from "react-query"
 import { ReactQueryDevtools } from 'react-query/devtools'
 //import 'bootstrap/dist/css/bootstrap.min.css'

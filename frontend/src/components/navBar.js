@@ -67,21 +67,21 @@ function NavBar(props) {
     return (
     
         <div className="navBar">
-            <img className="brandLogo" style={{marginLeft: '2rem'}} src={pluggLogo}/> 
-            <img style={{height: '15px', marginLeft: '8px'}} src={pForPlugg}/> 
-            <Link style={{ textDecoration: 'none', fontFamily: 'var(--fontHead)', fontWeight: '400', letterSpacing: '4px', fontSize: '16px'}} to='/'>LUGG </Link>
-            <div className="navRight">
-                <div>
+            <Link to='/' className="navLeft d-flex flex-row">
+                <img className="brandLogo" src={pluggLogo} style={{ marginTop: '8px'}} /> 
+                <div style={{ display: 'flex', flexDirection: 'row'}}>
+                    <img style={{height: '14px', marginLeft: '8px', marginTop: '15px'}} src={pForPlugg}/> 
+                    <p style={{ fontFamily: 'var(--fontHead)', fontWeight: 'medium', letterSpacing: '4px', fontSize: '16px', marginLeft: '4px', marginTop: '10px'}}>LUGG</p>
+                </div>
+            </Link>
+            <div className="navRight">                
                 <Link style={{ textDecoration: 'none' }}>Log In</Link>
-                </div>
-                <div>
+                
                 <Link style={{ textDecoration: 'none' }}>Sign Up</Link>
-                </div>
-                <div>
-                    <Link to={'/cart'}>
+                
+                <Link to={'/cart'} style={{ textDecoration: 'none', marginTop: '14px'}}>
                     { data && <p class="badgeCart" >{ data.data.cartItems }</p> }
-                    </Link>
-                </div>
+                </Link>
             </div>
 
         </div>
