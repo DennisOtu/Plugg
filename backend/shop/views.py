@@ -14,10 +14,12 @@ from .mySerializers import *
 from django.core.serializers.json import DjangoJSONEncoder
 from rest_framework.decorators import api_view
 from rest_framework import serializers
+from rest_framework.pagination import PageNumberPagination
 
 class ProductListAPIView(generics.ListCreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+    pagination_class = PageNumberPagination
 
 class ProductDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Product.objects.all()

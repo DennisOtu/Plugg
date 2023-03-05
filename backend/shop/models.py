@@ -13,10 +13,10 @@ class Customer(models.Model):
 
 
 class Product(models.Model):
-	seller = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
+#	seller= models.ForeignKey(User, default=1, on_delete=models.CASCADE)
 	category = models.CharField(max_length=100, null=True) 
 	subcategory = models.CharField(max_length=100, null=True)
-	name = models.CharField(max_length=100, null=True)
+	name = models.CharField(max_length=255, null=True)
 	price = models.DecimalField(max_digits=11, decimal_places=2)
 	likes_count = models.IntegerField(default=0)
 	color_1 = models.CharField(max_length=100, null=True, blank=True)

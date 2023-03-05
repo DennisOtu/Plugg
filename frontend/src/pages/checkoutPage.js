@@ -1,4 +1,4 @@
-import NavBar from "./navBar"
+import NavBar from "../components/navBar"
 import axios from "axios"
 import { useQuery } from 'react-query'
 

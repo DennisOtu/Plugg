@@ -1,7 +1,8 @@
-import NavBar from './navBar'
+import NavBar from '../components/navBar'
 import { useQuery } from 'react-query'
 import axios from 'axios'
 import { useParams } from "react-router-dom"
+import Footer from '../components/footer'
 
 const ProductInfoPage = () => {
     const { productID } = useParams()
@@ -19,9 +20,20 @@ const ProductInfoPage = () => {
     return (
         <div>
             <NavBar/>
-            <h1>PRODUCT INFO FOR PRODUCT {productID}</h1>
+            <h1 style={{marginTop: 'var(--navBarHeight)'}}>PRODUCT INFO FOR PRODUCT {productID}</h1>
             {isLoading && <h3>Loading...</h3>}
-            {data && <h2>PRODCUT NAME = {data.data.name} </h2>}
+            {data &&
+            	<>
+	                <div>
+	                	<img className="productDetailImg" src={ data.data.image_url }/>
+	                </div>
+
+	             	<h2>PRODCUT NAME = {data.data.name} </h2>
+            	</>
+
+         	}
+
+         	<Footer />
         </div>
     )
 }
