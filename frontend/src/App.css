@@ -13,8 +13,8 @@ html{
 :root {
 	--fontHead: 'Montserrat', sans-serif;
 	--fontInfo: 'Poppins', sans-serif;
-	--pluggRed: rgba(220, 20, 37, 0.97);
-	--pluggBlack: rgba(0, 0, 0, 0.877);
+	--pluggRed: rgba(220, 20, 37, 0.9);
+	--pluggBlack: rgba(0, 0, 0, 0.8);
 	--pluggGrey: hsl(0, 1%, 34%);
 	--navBarHeight: 38px;
 }
@@ -108,7 +108,7 @@ a:hover {
 
 .categoriesDiv {
 	width: 20%;
-	background: rgba(0, 0, 0, 0.86);
+	background: var(--pluggBlack);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -163,6 +163,12 @@ a:hover {
 	overflow: hidden;
 	justify-content: center;
 	align-items: center;
+}
+
+.dealsTextLarge {
+	color: white;
+	font-family: --var(fontInfo);
+	font-size: 4rem;
 }
 
 .dealsCard {
@@ -237,7 +243,8 @@ a:hover {
 
 .btnPill {
 	height: 1.5rem;
-	width: 4rem;
+	width: auto;
+	padding: 0.5rem;
 	background: white;
 	color: var(--pluggRed);
 	border: 1px solid var(--pluggRed);
@@ -256,7 +263,8 @@ a:hover {
 }
 
 .productDetailImg {
-	width: 30%;
+	position: relative;
+	width: 60%;
 }
 
 .row-image{
