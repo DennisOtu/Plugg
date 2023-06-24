@@ -71,7 +71,7 @@ function NavBar(props) {
                 <img className="brandLogo" src={pluggLogo} style={{ marginTop: '8px'}} /> 
                 <div style={{ display: 'flex', flexDirection: 'row'}}>
                     <img style={{height: '14px', marginLeft: '8px', marginTop: '15px'}} src={pForPlugg}/> 
-                    <p style={{ fontFamily: 'var(--fontHead)', fontWeight: 'medium', letterSpacing: '4px', fontSize: '16px', marginLeft: '4px', marginTop: '10px'}}>LUGG</p>
+                    <p style={{ fontFamily: 'var(--fontHead)', fontWeight: 'light', letterSpacing: '4px', fontSize: '16px', marginLeft: '4px', marginTop: '10px'}}>LUGG</p>
                 </div>
             </Link>
             <div className="navRight">                

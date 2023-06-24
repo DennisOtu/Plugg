@@ -34,6 +34,10 @@ a:hover {
 	color: inherit;
 }
 
+p {
+	font-size: 14px;
+}
+
 .navBar {
 	position: fixed;
 	top: 0; 
@@ -239,17 +243,17 @@ a:hover {
 	color: var(--pluggBlack);
 }
 
-
-
 .btnPill {
 	height: 1.5rem;
 	width: auto;
 	padding: 0.5rem;
 	background: white;
-	color: var(--pluggRed);
-	border: 1px solid var(--pluggRed);
+	color: var(--pluggGrey);
+	border: 1px solid ;
 	border-radius: 8px;
-	font-size: 12px;
+	font-family: var(--fontInfo);
+	font-size: 10px;
+	font-weight: bold;
 	display: flex;
 	align-self: center;
 	align-items: center;
@@ -260,11 +264,25 @@ a:hover {
 	cursor: pointer;
 	background: var(--pluggRed);
 	color: white;
+	border: 1px solid var(--pluggRed);
+
 }
 
 .productDetailImg {
 	position: relative;
-	width: 60%;
+	width: 100%;
+	border-radius: 0.25rem;
+}
+
+.productDetailThumbnail {
+	width: 25%;
+	margin: 4px;
+	border-radius: 0.25rem;
+
+}
+
+.productDetailThumbnail:hover {
+	cursor: pointer;
 }
 
 .row-image{
